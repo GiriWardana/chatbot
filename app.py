@@ -2,7 +2,6 @@ import os
 import ast
 import re
 import time
-import requests  # Add this to make an external API call to fetch the IP address
 import psycopg2
 from psycopg2 import sql
 import streamlit as st
@@ -266,7 +265,7 @@ if "text_boxes" not in st.session_state:
     st.session_state.text_boxes = []
 
 logo = "./logobpjstk.png"
-st.sidebar.image(image=logo, use_column_width=True)
+st.sidebar.image(image=logo, use_container_width=True)
 
 
 # Membuat pola untuk mendeteksi kata-kata spam
